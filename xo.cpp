@@ -12,7 +12,7 @@ public:
 private:
     void Init();    // function for init game board
     void Show_borad();  // function for print game board
-    void Get_input();   // function for input
+    void Get_input();   // function for get input
     void Make_change(int input);    // function for change in board
     bool Have_winner();     // function for check game has a winner
     bool Tie();     // function for check game is tie
@@ -23,12 +23,12 @@ private:
     int turn = 1;
 };
 
-void TicTacToe::Play_game() {
+void TicTacToe::Play_game() {   // function can play game
     Init();
-    while (!Have_winner() && !Tie()) {
-        Show_borad();
-        Get_input();
-        system("clear");
+    while (!Have_winner() && !Tie()) {  // checking game has winner or tie
+        Show_borad();   // print game board
+        Get_input();    // gating input from users
+        system("clear");    // clear the window and print it again
     }
     cout << (Have_winner() ? Winner_person() : "tie") << endl; 
 }
