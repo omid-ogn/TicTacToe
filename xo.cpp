@@ -94,8 +94,8 @@ string TicTacToe::Winner_person() {
     return (turn ? "winner is O" : "winner is X"); 
 }
 
-int main() {
-    TicTacToe t;
-    t.Play_game();
+int main() {    // main function
+    TicTacToe t;    // make game class
+    t.Play_game();  // playing game :)
     return 0;
 }
